@@ -2,7 +2,7 @@
   <div class="website_container">
     <header>
       <nav class="website_navigation">
-        <input class="navigation_item" type="text" value="" placeholder="Search.."></input>
+        <input class="navigation_item" type="text" value="" placeholder="Search..">
         <article class="navigation_item">
           <NuxtLink to="/">Blog</NuxtLink>
         </article>
