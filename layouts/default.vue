@@ -2,6 +2,7 @@
   <div class="website_container">
     <header>
       <nav class="website_navigation">
+        <input class="navigation_item" type="text" value="" placeholder="Search.."></input>
         <article class="navigation_item">
           <NuxtLink to="/">Blog</NuxtLink>
         </article>
@@ -63,7 +64,7 @@ body {
   overflow: hidden;
 
   & .website_container {
-    min-width: 320px;
+    min-width: 330px;
     width: 100%;
     max-width: 820px;
     height: 100vh;
@@ -77,10 +78,18 @@ body {
         justify-content: flex-end;
         align-items: center;
 
+        & input {
+          border-radius: 5px;
+          outline: none;
+          border: 3px solid #dedede;
+          background-color: #f5f5f5;
+          width: 120px !important;
+        }
+
         & .navigation_item {
-          width: 85px;
+          width: 75px;
           height: 35px;
-          margin-right: 25px;
+          margin-right: 15px;
 
           & a {
             display: flex;
