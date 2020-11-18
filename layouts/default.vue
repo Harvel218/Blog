@@ -1,10 +1,20 @@
 <template>
-  <div>
+  <div class="website_container">
+    <header>
+      <nav class="website_navigation">
+        <article class="navigation_item">
+          <NuxtLink to="/">Blog</NuxtLink>
+        </article>
+        <article class="navigation_item">
+          <NuxtLink to="/about">About</NuxtLink>
+        </article>
+      </nav>
+    </header>
     <Nuxt />
   </div>
 </template>
 
-<style>
+<style lang="scss">
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -24,32 +34,70 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+article,
+section,
+main,
+footer,
+nav,
+span {
   text-decoration: none;
-  padding: 10px 30px;
+  color: black;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden;
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+  & .website_container {
+    min-width: 320px;
+    width: 100%;
+    max-width: 820px;
+    height: 100vh;
+    margin: 0 auto;
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+    & header {
+      & .website_navigation {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        & .navigation_item {
+          width: 85px;
+          height: 35px;
+          margin-right: 25px;
+
+          & a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: cornsilk;
+            border-radius: 5px;
+
+            &.nuxt-link-active {
+              background-color: orange;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 </style>
