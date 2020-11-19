@@ -125,9 +125,9 @@ body {
             height: 39px;
             font-size: 16.5px;
             color: #dedede;
+            padding-left:10px;
 
             &::placeholder {
-              padding-left: 10px;
               color: #dedede;
             }
           }
