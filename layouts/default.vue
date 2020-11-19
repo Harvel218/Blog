@@ -1,6 +1,6 @@
 <template>
   <div class="website_container">
-    <header>
+    <header class="navigation_wraper">
       <nav class="website_navigation">
         <article class="website_logo">
           <img src="/harvel_logo.png">
@@ -70,9 +70,9 @@ body {
     height: 120vh;
     margin: 0 auto;
 
-    & header {
+    & .navigation_wraper {
       width: 100%;
-      height: 50px;
+      height: 90px;
       position: relative;
 
       & .website_navigation {
@@ -95,7 +95,7 @@ body {
           padding-right:5px;
           padding-bottom:5px;
           border-radius:0 0 5px 5px;
-          background-color:#dedede;
+          background-color:#c0c0c0;
           height: 100%;
 
           & img{
@@ -106,7 +106,6 @@ body {
 
         & .search_box {
           display: flex;
-          flex-direction: wrap;
           flex-wrap: nowrap;
           justify-content: flex-end;
           align-items: center;
@@ -117,14 +116,14 @@ body {
           & input {
             border-radius: 5px 0 0 5px;
             outline: none;
-            border: 2px solid #dedede;
+            border: 2px solid #c0c0c0;
             background-color: #fff;
             min-width: 150px;
             width: calc(100% - 30px);
             max-width: 475px;
             height: 39px;
             font-size: 16.5px;
-            color: #dedede;
+            color: #c0c0c0;
             padding-left:10px;
 
             &::placeholder {
@@ -135,12 +134,12 @@ body {
           & button {
             height: 39px;
             width: 30px;
-            border-top: 2px solid #dedede;
-            border-right: 2px solid #dedede;
-            border-bottom: 2px solid #dedede;
+            border-top: 2px solid #c0c0c0;
+            border-right: 2px solid #c0c0c0;
+            border-bottom: 2px solid #c0c0c0;
             border-left: none;
             outline: none;
-            background-color: #dedede;
+            background-color: #c0c0c0;
             font-size: 39px;
             font-weight: bold;
             color: #fff;
