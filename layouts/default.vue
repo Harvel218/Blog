@@ -2,10 +2,13 @@
   <div class="website_container">
     <header>
       <nav class="website_navigation">
-        <div class="search_box">
+        <article class="website_logo">
+          <span class="some-logo"></span>
+        </article>
+        <article class="search_box">
           <input type="text" value="" placeholder="Search for anything.." />
           <button type="button">&#10095;</button>
-        </div>
+        </article>
       </nav>
     </header>
     <Nuxt />
@@ -81,6 +84,23 @@ body {
         align-items: center;
         position: fixed;
         top: 0;
+
+        & .website_logo {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: calc(30% - 20px);
+          margin-right: 20px;
+          height: 39px;
+
+          & .some-logo {
+            max-width: calc(100% - 20px);
+            margin-left: 20px;
+            min-width: 50px;
+            height: 100%;
+            background-color: blue;
+          }
+        }
 
         & .search_box {
           display: flex;
