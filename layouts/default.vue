@@ -3,7 +3,7 @@
     <header>
       <nav class="website_navigation">
         <article class="website_logo">
-          <span class="some-logo"></span>
+          <img src="/harvel_logo.png">
         </article>
         <article class="search_box">
           <input type="text" value="" placeholder="Search for anything.." />
@@ -77,28 +77,30 @@ body {
 
       & .website_navigation {
         width: 100%;
-        height: 50px;
+        height: 90px;
         max-width: 820px;
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        justify-content: space-between;
+        align-items: flex-end;
         position: fixed;
         top: 0;
 
         & .website_logo {
           display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          width: calc(30% - 20px);
-          margin-right: 20px;
-          height: 39px;
+          justify-content: center;
+          align-items: flex-end;
+          width: 75px;
+          margin-left:20px;
+          padding-left:5px;
+          padding-right:5px;
+          padding-bottom:5px;
+          border-radius:0 0 5px 5px;
+          background-color:#dedede;
+          height: 100%;
 
-          & .some-logo {
-            max-width: calc(100% - 20px);
-            margin-left: 20px;
-            min-width: 50px;
-            height: 100%;
-            background-color: blue;
+          & img{
+            width:100%;
+            height:auto;
           }
         }
 
@@ -108,8 +110,7 @@ body {
           flex-wrap: nowrap;
           justify-content: flex-end;
           align-items: center;
-          min-width: 185px;
-          width: 70%;
+          width: calc(100% - 135px);
           max-width: 500px;
           margin-right: 20px;
 
@@ -124,9 +125,9 @@ body {
             height: 39px;
             font-size: 16.5px;
             color: #dedede;
+            padding-left:10px;
 
             &::placeholder {
-              padding-left: 10px;
               color: #dedede;
             }
           }
@@ -140,13 +141,14 @@ body {
             border-left: none;
             outline: none;
             background-color: #dedede;
-            font-size: 30px;
+            font-size: 39px;
             font-weight: bold;
             color: #fff;
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
+            line-height:39px;
           }
         }
       }
