@@ -43,16 +43,16 @@ export default Vue.extend({})
     width: 100%;
     min-height: 40vh;
     height: auto;
-    background-color: #c0c0c0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    & section {
-      min-width: 300px;
-      width: 40%;
-      background-color: darkred;
+    & .article_container {
+      width:300px;
+      height: 350px;
+      background-color: rgba(0,0,0,.03);
+      border-radius:5px;
       margin-bottom: 15px;
     }
   }
