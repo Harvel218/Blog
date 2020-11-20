@@ -21,7 +21,7 @@ export default {
     dirs: [
       '~/components',
       {
-        path: '~/components/base/',
+        path: '~/components/basic/',
         prefix: 'Base',
       },
     ],
@@ -33,6 +33,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    "@nuxt/components",
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
