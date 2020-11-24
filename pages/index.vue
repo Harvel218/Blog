@@ -4,7 +4,9 @@
       <p class="hello_message">Go, get anything You dreamed of</p>
     </nav>
     <main>
-      <ArticlePreview /><ArticlePreview /><ArticlePreview /><ArticlePreview /><ArticlePreview />
+      <div class="wraper">
+        <ArticlePreview /><ArticlePreview /><ArticlePreview />
+      </div>
     </main>
     <footer></footer>
   </div>
@@ -48,12 +50,16 @@ export default Vue.extend({})
     flex-wrap: wrap;
     justify-content: space-between;
 
-    & .article_container {
-      width:300px;
-      height: 350px;
-      background-color: rgba(0,0,0,.03);
-      border-radius:5px;
-      margin-bottom: 15px;
+    & .wraper {
+      width: 100%;
+      height: 100%;
+
+      & .article_container {
+        width: 100%;
+        height: auto;
+        max-height: 550px;
+        border-radius: 5px;
+      }
     }
   }
 }

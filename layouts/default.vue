@@ -64,7 +64,7 @@ body {
   overflow-x: hidden;
 
   & .website_container {
-    min-width: 330px;
+    min-width: 320px;
     width: 100%;
     max-width: 820px;
     height: 120vh;
