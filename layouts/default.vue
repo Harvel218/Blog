@@ -50,7 +50,7 @@ footer,
 nav,
 span {
   text-decoration: none;
-  color: black;
+  color: $main_font_color;
 }
 
 body {
@@ -62,6 +62,7 @@ body {
   min-height: 100vh;
   height: auto;
   overflow-x: hidden;
+      background-color:$page_bg;
 
   & .website_container {
     min-width: 320px;
@@ -84,6 +85,9 @@ body {
         align-items: flex-end;
         position: fixed;
         top: 0;
+        background-color: $bright_color;
+        padding-bottom:15px;
+        border-radius: 0 0 15px 15px;
 
         & .website_logo {
           display: flex;
@@ -95,7 +99,7 @@ body {
           padding-right:5px;
           padding-bottom:5px;
           border-radius:0 0 5px 5px;
-          background-color:#c0c0c0;
+          background-color:$main_page_color;
           height: 100%;
 
           & img{
@@ -116,14 +120,14 @@ body {
           & input {
             border-radius: 5px 0 0 5px;
             outline: none;
-            border: 2px solid #c0c0c0;
+            border: 2px solid $main_page_color;
             background-color: #fff;
             min-width: 150px;
             width: calc(100% - 30px);
             max-width: 475px;
             height: 39px;
             font-size: 16.5px;
-            color: #c0c0c0;
+            color: $main_page_color;
             padding-left:10px;
 
             &::placeholder {
@@ -134,12 +138,12 @@ body {
           & button {
             height: 39px;
             width: 30px;
-            border-top: 2px solid #c0c0c0;
-            border-right: 2px solid #c0c0c0;
-            border-bottom: 2px solid #c0c0c0;
+            border-top: 2px solid $main_page_color;
+            border-right: 2px solid $main_page_color;
+            border-bottom: 2px solid $main_page_color;
             border-left: none;
             outline: none;
-            background-color: #c0c0c0;
+            background-color:$main_page_color;
             font-size: 39px;
             font-weight: bold;
             color: #fff;

@@ -35,10 +35,9 @@ export default Vue.extend({})
 
     & .hello_message {
       font-size: 16.5px;
-      color: black;
       font-weight: 550;
       padding: 2px 10px;
-      border-bottom: 2px solid black;
+      border-bottom: 2px solid $main_page_color;
     }
   }
   & main {
@@ -58,7 +57,7 @@ export default Vue.extend({})
         width: 100%;
         height: auto;
         max-height: 550px;
-        border-radius: 5px;
+          margin-bottom: 20px;
       }
     }
   }

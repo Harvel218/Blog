@@ -2,7 +2,7 @@
   <section class="article_container">
     <nav class="article_info">
       <span class="date">22.08.2020</span>
-      <span
+      <span class="info"
         ><span class="author">Krzysztof Gacek</span>
         <span class="tag">#angular</span></span
       >
@@ -17,44 +17,52 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  padding: 5px;
-  border-bottom: 2px solid #f2f4f5;
+  border: 2px solid $main_page_color;
   transition: 0.3s ease-in-out;
   cursor: pointer;
-  margin-bottom: 40px;
   flex-wrap: wrap;
 
   &:hover {
-    background-color: #f2f4f5;
-    opacity: 80%;
+    background-color: $main_page_color;
+    border-radius: 5px;
   }
 
   &:active {
     transform: scale(0.95);
+    border-radius: 5px;
   }
 
   & .article_info {
-    // top: -18px;
-    // left: 5px;
     font-size: 12.5px;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-bottom:5px;
+    padding-bottom: 5px;
 
-    & .author {
-      padding-right: 15px;
+    & .date {
+      padding: 5px;
+      background-color: $main_page_color;
+      border-radius: 0 0 5px 0;
+
+      &.author {
+        padding-right: 15px;
+      }
+    }
+
+    & .info {
+      padding: 5px;
+      background-color: $main_page_color;
+      border-radius: 0 0 0 5px;
     }
   }
 
   & .article_title {
     font-size: 16.5px;
     margin-bottom: 5px;
-    width: calc(100% - 30px);
+    width: calc(100% - 40px);
     text-align: left;
-    padding-right: 10px;
+    padding: 0 5px;
+    font-weight: 550;
   }
 
   & .article_img {
@@ -63,7 +71,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightcyan;
+    background-color: $main_page_color;
+    padding: 0 5px;
+    margin-bottom: 5px;
 
     & img {
       width: 30px;
