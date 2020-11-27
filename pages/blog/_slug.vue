@@ -1,8 +1,7 @@
 <template>
   <article>
-    <pre> {{ article }} </pre>
+    <!-- <pre> {{ article }} </pre> -->
     <nuxt-content :document="article" />
-
   </article>
 </template>
 
@@ -16,8 +15,3 @@ export default {
 }
 </script>
 
-<style lang="scss">
-body {
-  color: black;
-}
-</style>
