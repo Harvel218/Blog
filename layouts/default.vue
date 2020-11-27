@@ -3,7 +3,7 @@
     <header class="navigation_wraper">
       <nav class="website_navigation">
         <article class="website_logo">
-          <img src="/harvel_logo.png">
+          <img src="/harvel_logo.png" />
         </article>
         <article class="search_box">
           <input type="text" value="" placeholder="Search for anything.." />
@@ -53,6 +53,12 @@ span {
   color: $main_font_color;
 }
 
+ul {
+  list-style:none;
+  padding: 0;
+  width:100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -62,7 +68,7 @@ body {
   min-height: 100vh;
   height: auto;
   overflow-x: hidden;
-      background-color:$page_bg;
+  background-color: $page_bg;
 
   & .website_container {
     min-width: 320px;
@@ -86,7 +92,7 @@ body {
         position: fixed;
         top: 0;
         background-color: $bright_color;
-        padding-bottom:15px;
+        padding-bottom: 15px;
         border-radius: 0 0 15px 15px;
 
         & .website_logo {
@@ -94,17 +100,17 @@ body {
           justify-content: center;
           align-items: flex-end;
           width: 75px;
-          margin-left:20px;
-          padding-left:5px;
-          padding-right:5px;
-          padding-bottom:5px;
-          border-radius:0 0 5px 5px;
-          background-color:$main_page_color;
+          margin-left: 20px;
+          padding-left: 5px;
+          padding-right: 5px;
+          padding-bottom: 5px;
+          border-radius: 0 0 5px 5px;
+          background-color: $main_page_color;
           height: 100%;
 
-          & img{
-            width:100%;
-            height:auto;
+          & img {
+            width: 100%;
+            height: auto;
           }
         }
 
@@ -128,7 +134,7 @@ body {
             height: 39px;
             font-size: 16.5px;
             color: $main_page_color;
-            padding-left:10px;
+            padding-left: 10px;
 
             &::placeholder {
               color: #dedede;
@@ -143,7 +149,7 @@ body {
             border-bottom: 2px solid $main_page_color;
             border-left: none;
             outline: none;
-            background-color:$main_page_color;
+            background-color: $main_page_color;
             font-size: 39px;
             font-weight: bold;
             color: #fff;
@@ -151,7 +157,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            line-height:39px;
+            line-height: 39px;
           }
         }
       }

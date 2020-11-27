@@ -4,16 +4,19 @@
       <p class="hello_message">Go, get anything You dreamed of</p>
     </nav>
     <main>
-      <div class="wraper">
-        <ArticlePreview
-          v-for="article of articles"
-          :key="article.slug"
-          :title="article.title"
-          :author="article.author"
-          :date="article.date"
-          :tag="article.tag"
-        ></ArticlePreview>
-      </div>
+      <ul>
+        <li v-for="article of articles" :key="article.slug">
+          <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+            <ArticlePreview
+              :title="article.title"
+              :author="article.author"
+              :date="article.date"
+              :tag="article.tag"
+            >
+            </ArticlePreview
+          ></NuxtLink>
+        </li>
+      </ul>
     </main>
     <footer></footer>
   </div>
@@ -68,18 +71,13 @@ console.log(ArticlePreviewVue)
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 
-    & .wraper {
+    & .article_container {
       width: 100%;
-      height: 100%;
-
-      & .article_container {
-        width: 100%;
-        height: auto;
-        max-height: 550px;
-        margin-bottom: 20px;
-      }
+      height: auto;
+      max-height: 550px;
+      margin-bottom: 20px;
     }
   }
 }
