@@ -6,10 +6,12 @@
     <main>
       <div class="wraper">
         <ArticlePreview
-          :title="sad"
-          :author="ja"
-          :date="jakaś"
-          :tag="jakiś"
+          v-for="article of articles"
+          :key="article.slug"
+          :title="article.title"
+          :author="article.author"
+          :date="article.date"
+          :tag="article.tag"
         ></ArticlePreview>
       </div>
     </main>
@@ -24,15 +26,13 @@ import ArticlePreviewVue from '~/components/ArticlePreview.vue'
 export default Vue.extend({
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
-      .only(['title', 'description', 'img', 'slug', 'author'])
-      .sortBy('createdAt', 'desc')
+      .only(['title', 'date', 'img', 'slug', 'author', 'tag'])
+      .sortBy('createdAt')
       .fetch()
     return {
       articles,
     }
   },
-
-
 })
 
 console.log(ArticlePreviewVue)

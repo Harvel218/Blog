@@ -14,13 +14,20 @@
 
 <script>
 export default {
-  props: ['date', 'author', 'tag', 'title'],
-  data: {
-    date: '',
-    author: '',
-    tag: '',
-    title: '',
+  props: {
+    date: [String, Number],
+    author: [String],
+    tag: [String, Symbol],
+    title: [String],
   },
+  // data() {
+  //   return {
+  //     date: [String, Number],
+  //     author: [String],
+  //     tag: [String, Symbol],
+  //     title: [String],
+  //   }
+  // },
 }
 </script>
 
