@@ -5,16 +5,37 @@
     </nav>
     <main>
       <div class="wraper">
-        <ArticlePreview /><ArticlePreview /><ArticlePreview />
+        <ArticlePreview
+          :title="sad"
+          :author="ja"
+          :date="jakaś"
+          :tag="jakiś"
+        ></ArticlePreview>
       </div>
     </main>
     <footer></footer>
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
-export default Vue.extend({})
+import ArticlePreviewVue from '~/components/ArticlePreview.vue'
+
+export default Vue.extend({
+  async asyncData({ $content, params }) {
+    const articles = await $content('articles', params.slug)
+      .only(['title', 'description', 'img', 'slug', 'author'])
+      .sortBy('createdAt', 'desc')
+      .fetch()
+    return {
+      articles,
+    }
+  },
+
+
+})
+
+console.log(ArticlePreviewVue)
 </script>
 
 <style lang="scss">
@@ -57,20 +78,12 @@ export default Vue.extend({})
         width: 100%;
         height: auto;
         max-height: 550px;
-          margin-bottom: 20px;
+        margin-bottom: 20px;
       }
     }
   }
 }
-// .title {
-//   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-//     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-//   display: block;
-//   font-weight: 300;
-//   font-size: 100px;
-//   color: #35495e;
-//   letter-spacing: 1px;
-// }
+
 .subtitle {
   font-weight: 300;
   font-size: 42px;

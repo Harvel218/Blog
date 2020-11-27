@@ -22,10 +22,6 @@ export default {
   components: {
     dirs: [
       '~/components',
-      {
-        path: '~/components/basic/',
-        prefix: 'Base',
-      },
     ],
   },
 

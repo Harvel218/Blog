@@ -1,16 +1,28 @@
 <template>
   <section class="article_container">
     <nav class="article_info">
-      <span class="date">22.08.2020</span>
+      <span class="date">{{ date }}</span>
       <span class="info"
-        ><span class="author">Krzysztof Gacek</span>
-        <span class="tag">#angular</span></span
+        ><span class="author">{{ author }}</span>
+        <span class="tag">{{ tag }}</span></span
       >
     </nav>
-    <header class="article_title">Co sądze o TypeScript na poważnie?</header>
+    <header class="article_title">{{ title }}</header>
     <aside class="article_img"><img src="" alt="" /></aside>
   </section>
 </template>
+
+<script>
+export default {
+  props: ['date', 'author', 'tag', 'title'],
+  data: {
+    date: '',
+    author: '',
+    tag: '',
+    title: '',
+  },
+}
+</script>
 
 <style lang="scss">
 .article_container {
