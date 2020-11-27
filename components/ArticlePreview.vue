@@ -36,7 +36,6 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 2px solid $main_page_color;
   transition: 0.3s ease-in-out;
   cursor: pointer;
   flex-wrap: wrap;

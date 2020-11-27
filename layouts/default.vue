@@ -2,8 +2,8 @@
   <div class="website_container">
     <header class="navigation_wraper">
       <nav class="website_navigation">
-        <article class="website_logo">
-          <img src="/harvel_logo.png" />
+        <article class="website_logo"><NuxtLink to="/">
+          <img src="/harvel_logo.png" /></NuxtLink>
         </article>
         <article class="search_box">
           <input type="text" value="" placeholder="Search for anything.." />
@@ -103,10 +103,10 @@ body {
           margin-left: 20px;
           padding-left: 5px;
           padding-right: 5px;
-          padding-bottom: 5px;
           border-radius: 0 0 5px 5px;
           background-color: $main_page_color;
           height: 100%;
+          
 
           & img {
             width: 100%;
