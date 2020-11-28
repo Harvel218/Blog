@@ -2,13 +2,10 @@
   <div class="website_container">
     <header class="navigation_wraper">
       <nav class="website_navigation">
-        <article class="website_logo"><NuxtLink to="/">
-          <img src="/harvel_logo.png" /></NuxtLink>
+        <article class="website_logo">
+          <NuxtLink to="/"> <img src="/harvel_logo.png" /></NuxtLink>
         </article>
-        <article class="search_box">
-          <input type="text" value="" placeholder="Search for anything.." />
-          <button type="button">&#10095;</button>
-        </article>
+        <SearchInput />
       </nav>
     </header>
     <Nuxt />
@@ -54,9 +51,9 @@ span {
 }
 
 ul {
-  list-style:none;
+  list-style: none;
   padding: 0;
-  width:100%;
+  width: 100%;
 }
 
 body {
@@ -106,58 +103,10 @@ body {
           border-radius: 0 0 5px 5px;
           background-color: $main_page_color;
           height: 100%;
-          
 
           & img {
             width: 100%;
             height: auto;
-          }
-        }
-
-        & .search_box {
-          display: flex;
-          flex-wrap: nowrap;
-          justify-content: flex-end;
-          align-items: center;
-          width: calc(100% - 135px);
-          max-width: 500px;
-          margin-right: 20px;
-
-          & input {
-            border-radius: 5px 0 0 5px;
-            outline: none;
-            border: 2px solid $main_page_color;
-            background-color: #fff;
-            min-width: 150px;
-            width: calc(100% - 30px);
-            max-width: 475px;
-            height: 39px;
-            font-size: 16.5px;
-            color: $main_page_color;
-            padding-left: 10px;
-
-            &::placeholder {
-              color: #dedede;
-            }
-          }
-
-          & button {
-            height: 39px;
-            width: 30px;
-            border-top: 2px solid $main_page_color;
-            border-right: 2px solid $main_page_color;
-            border-bottom: 2px solid $main_page_color;
-            border-left: none;
-            outline: none;
-            background-color: $main_page_color;
-            font-size: 39px;
-            font-weight: bold;
-            color: #fff;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            line-height: 39px;
           }
         }
       }
