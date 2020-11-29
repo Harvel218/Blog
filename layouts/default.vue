@@ -5,9 +5,10 @@
         <article class="website_logo">
           <NuxtLink to="/"> <img src="/harvel_logo.png" /></NuxtLink>
         </article>
-        <SearchInput />
+        <SearchArticle />
       </nav>
     </header>
+
     <Nuxt />
   </div>
 </template>
@@ -73,6 +74,7 @@ body {
     max-width: 820px;
     height: 120vh;
     margin: 0 auto;
+    position: relative;
 
     & .navigation_wraper {
       width: 100%;
@@ -90,14 +92,15 @@ body {
         top: 0;
         background-color: $bright_color;
         padding-bottom: 15px;
-        border-radius: 0 0 15px 15px;
+        border-right: 2px solid $main_page_color;
+        border-radius: 0 0 5px 5px;
 
         & .website_logo {
           display: flex;
           justify-content: center;
           align-items: flex-end;
           width: 75px;
-          margin-left: 20px;
+          margin-left: 15px;
           padding-left: 5px;
           padding-right: 5px;
           border-radius: 0 0 5px 5px;
