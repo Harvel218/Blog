@@ -2,7 +2,7 @@
 date: 30.11.2020 
 author: Chris NGM
 title: "Something about nothing"
-post_number: 3
+tag: "#3"
 ---
 
 # The Ultimate Covid Pivot: turning your brain inside out, with gary ardt

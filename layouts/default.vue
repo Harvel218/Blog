@@ -90,9 +90,8 @@ body {
         align-items: flex-end;
         position: fixed;
         top: 0;
-        background-color: $bright_color;
+        background-color:  $main_page_color;
         padding-bottom: 15px;
-        border-right: 2px solid $main_page_color;
         border-radius: 0 0 5px 5px;
 
         & .website_logo {

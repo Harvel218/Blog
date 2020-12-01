@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <nav class="page_title_wraper">
-      <p class="hello_message">Go, get anything You dreamed of</p>
+      <p class="hello_message">Go get anything You dreamed of</p>
     </nav>
     <main>
       <ul>
@@ -11,6 +11,7 @@
               :title="article.title"
               :author="article.author"
               :date="article.date"
+              :tag="article.tag"
             >
             </ArticlePreview
           ></NuxtLink>
@@ -28,8 +29,8 @@ import ArticlePreviewVue from '~/components/ArticlePreview.vue'
 export default Vue.extend({
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
-      .only(['title', 'date', 'img', 'slug', 'author'])
-      .sortBy('post_number', 'asc')
+      .only(['title', 'date', 'img', 'slug', 'author', 'tag'])
+      .sortBy('tag', 'asc')
       .fetch()
     return {
       articles,
@@ -60,8 +61,7 @@ console.log(ArticlePreviewVue)
       font-size: 16.5px;
       font-weight: 550;
       padding: 2px 10px;
-      text-decoration:underline;
-      color:$main_page_color;
+      color:$main_font_color;
     }
   }
   & main {

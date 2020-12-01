@@ -4,10 +4,10 @@
       <span class="date">{{ date }}</span>
       <span class="info"
         ><span class="author">{{ author }}</span>
-        <span class="tag">{{ tag }}</span></span
+        <span class="tag"></span></span
       >
     </nav>
-    <header class="article_title">{{ title }}</header>
+    <header class="article_title">{{ tag }}: {{ title }}</header>
     <aside class="article_img"><img src="" alt="" /></aside>
   </section>
 </template>

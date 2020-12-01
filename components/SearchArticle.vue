@@ -4,7 +4,7 @@
       v-model="searchQuery"
       type="search"
       autocomplete="off"
-      placeholder="Search for anything.."
+      placeholder="Search Articles.."
     />
 
     <nav class="search_resoult">
@@ -62,20 +62,20 @@ export default {
     max-width: 475px;
     height: 39px;
     font-size: 16.5px;
-    color: $main_page_color;
+    color: $bright_color;
     padding-left: 10px;
     min-height: 0;
 
     &::placeholder {
-      color: #dedede;
+      color: $page_bg;
     }
   }
 
   & .search_resoult {
-    width:497px;
+    width: 497px;
     position: absolute;
-    top: 74px;
-    right: -2px;
+    top: 80px;
+    right: 0;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
@@ -88,24 +88,25 @@ export default {
 
     & ul {
       width: 100%;
-      border-right: 2px solid $main_page_color;
-      border-radius: 0 0 5px 5px;
-      transition: .5s ease-in-out;
+      transition: 0.5s ease-in-out;
 
       & li {
         display: block;
-        background-color:$bright_color;
+        background-color: $main_page_color;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: rgba(0,0,0,.2);
+          transform: scale(0.95);
+          transition: 0.5s;
+        }
 
         & a {
           display: block;
           padding: 10px 20px 10px 10px;
           width: 100%;
           height: 100%;
-                transition: .3s;
-
-          &:hover {
-            background-color: $main_page_color;
-          }
+          transition: 0.3s;
         }
       }
     }
