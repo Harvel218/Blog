@@ -29,7 +29,7 @@ export default Vue.extend({
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
       .only(['title', 'date', 'img', 'slug', 'author'])
-      .sortBy('createdAt')
+      .sortBy('post_number', 'asc')
       .fetch()
     return {
       articles,
@@ -60,23 +60,28 @@ console.log(ArticlePreviewVue)
       font-size: 16.5px;
       font-weight: 550;
       padding: 2px 10px;
-      border-bottom: 2px solid $main_page_color;
+      text-decoration:underline;
+      color:$main_page_color;
     }
   }
   & main {
     width: 100%;
-    min-height: 40vh;
     height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 
-    & .article_container {
-      width: 100%;
-      height: auto;
-      max-height: 550px;
-      margin-bottom: 20px;
+    & ul {
+      display: flex;
+      flex-direction: column-reverse;
+
+      & .article_container {
+        width: 100%;
+        height: auto;
+        max-height: 550px;
+        margin-bottom: 20px;
+      }
     }
   }
 }

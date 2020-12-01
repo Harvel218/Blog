@@ -72,9 +72,7 @@ export default {
   }
 
   & .search_resoult {
-    width: auto;
-    min-width: 280px;
-    max-width: 500px;
+    width:497px;
     position: absolute;
     top: 74px;
     right: -2px;
@@ -85,12 +83,12 @@ export default {
     border-radius: 5px;
 
     @media (max-width: 640px) {
-      max-width: unset;
+      width: auto;
     }
+
     & ul {
-      background-color: $main_page_color;
       width: 100%;
-      border-right: 1px solid $main_page_color;
+      border-right: 2px solid $main_page_color;
       border-radius: 0 0 5px 5px;
       transition: .5s ease-in-out;
 
@@ -100,7 +98,7 @@ export default {
 
         & a {
           display: block;
-          padding: 10px 10px 10px 10px;
+          padding: 10px 20px 10px 10px;
           width: 100%;
           height: 100%;
                 transition: .3s;
