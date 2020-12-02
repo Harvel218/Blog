@@ -90,7 +90,7 @@ body {
         align-items: flex-end;
         position: fixed;
         top: 0;
-        background-color:  $main_page_color;
+        background-color: $main_page_color;
         padding-bottom: 15px;
         border-radius: 0 0 5px 5px;
 

@@ -8,7 +8,7 @@
       >
     </nav>
     <header class="article_title">{{ tag }}: {{ title }}</header>
-    <aside class="article_img"><img src="" alt="" /></aside>
+    <!-- <aside class="article_img"><img src="" alt="" /></aside> -->
   </section>
 </template>
 

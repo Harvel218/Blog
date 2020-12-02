@@ -42,7 +42,8 @@ export default {
   },
 }
 </script>
-        <style lang="scss">
+
+<style lang="scss">
 .search_area {
   display: flex;
   flex-wrap: nowrap;
@@ -62,12 +63,12 @@ export default {
     max-width: 475px;
     height: 39px;
     font-size: 16.5px;
-    color: $bright_color;
+    color: $main_font_color;
     padding-left: 10px;
     min-height: 0;
 
     &::placeholder {
-      color: $page_bg;
+      color: $bright_color;
     }
   }
 
@@ -96,9 +97,9 @@ export default {
         border-radius: 5px;
 
         &:hover {
-          background-color: rgba(0,0,0,.2);
+          background-color: rgba(0, 0, 0, 0.2);
           transform: scale(0.95);
-          transition: 0.5s;
+          transition: 0.5s ease-in-out;
         }
 
         & a {
