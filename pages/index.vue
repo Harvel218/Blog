@@ -1,31 +1,89 @@
 <template>
- 
+  <div class="container">
+    <nav class="page_title_wraper">
+      <p class="hello_message">Go get anything You dreamed of</p>
+    </nav>
+    <main>
+      <ul>
+        <li v-for="article of articles" :key="article.slug">
+          <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+            <ArticlePreview
+              :title="article.title"
+              :author="article.author"
+              :date="article.date"
+              :tag="article.tag"
+            >
+            </ArticlePreview
+          ></NuxtLink>
+        </li>
+      </ul>
+    </main>
+    <footer></footer>
+  </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
+import ArticlePreviewVue from '~/components/ArticlePreview.vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  async asyncData({ $content, params }) {
+    const articles = await $content('articles', params.slug)
+      .only(['title', 'date', 'img', 'slug', 'author', 'tag'])
+      .sortBy('tag', 'asc')
+      .fetch()
+    return {
+      articles,
+    }
+  },
+})
+
+console.log(ArticlePreviewVue)
 </script>
 
-<style>
+<style lang="scss">
 .container {
   margin: 0 auto;
+  padding: 0 20px;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
   text-align: center;
-}
+  & .page_title_wraper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    margin: 30px 0;
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+    & .hello_message {
+      font-size: 16.5px;
+      font-weight: 550;
+      padding: 2px 10px;
+      color:$main_font_color;
+    }
+  }
+  & main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & ul {
+      display: flex;
+      flex-direction: column-reverse;
+
+      & .article_container {
+        width: 100%;
+        height: auto;
+        max-height: 550px;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
 .subtitle {
@@ -35,7 +93,6 @@ export default Vue.extend({})
   word-spacing: 5px;
   padding-bottom: 15px;
 }
-
 .links {
   padding-top: 15px;
 }
